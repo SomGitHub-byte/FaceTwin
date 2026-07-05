@@ -18,6 +18,9 @@ Upload a photo, and a multi-agent pipeline analyzes your facial features, compar
 
 ---
 
+<img width="1763" height="1340" alt="image" src="https://github.com/user-attachments/assets/ea301e19-6d92-48ab-84c5-c153eb6ed98f" />
+
+
 ## Architecture
 
 FaceTwin is built as a **multi-agent system** on **Google's Agent Development Kit (ADK)**, with all face-processing logic exposed through a standalone **MCP server** rather than imported directly into the agents.
