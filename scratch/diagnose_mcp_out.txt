@@ -1,0 +1,130 @@
+﻿python : 2026-07-05 20:40:38,767 INFO Processing request of type 
+CallToolRequest
+At line:1 char:38
++ ... one Project\vibematch"; python .\scratch\diagnose_mcp.py 2>&1 | Out-F ...
++                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-07-05 20:4...CallToolRequest 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: All log messages before absl::InitializeLog() is called are written 
+to STDERR
+I0000 00:00:1783264238.888431   16688 port.cc:153] oneDNN custom operations 
+are on. You may see slightly different numerical results due to floating-point 
+round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written 
+to STDERR
+I0000 00:00:1783264241.259232   16688 port.cc:153] oneDNN custom operations 
+are on. You may see slightly different numerical results due to floating-point 
+round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-07-05 20:40:42,638 WARNING From C:\Users\sombi\AppData\Roaming\Python\Pyth
+on312\site-packages\tf_keras\src\losses.py:2976: The name 
+tf.losses.sparse_softmax_cross_entropy is deprecated. Please use 
+tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-07-05 20:40:49,345 INFO tool=moderate_image 
+timestamp=2026-07-05T15:10:49.345031+00:00 status=success
+2026-07-05 20:40:49,347 INFO Processing request of type ListToolsRequest
+2026-07-05 20:40:51,084 INFO Processing request of type CallToolRequest
+WARNING: All log messages before absl::InitializeLog() is called are written 
+to STDERR
+I0000 00:00:1783264251.182852   13816 port.cc:153] oneDNN custom operations 
+are on. You may see slightly different numerical results due to floating-point 
+round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written 
+to STDERR
+I0000 00:00:1783264253.535561   13816 port.cc:153] oneDNN custom operations 
+are on. You may see slightly different numerical results due to floating-point 
+round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-07-05 20:40:54,958 WARNING From C:\Users\sombi\AppData\Roaming\Python\Pyth
+on312\site-packages\tf_keras\src\losses.py:2976: The name 
+tf.losses.sparse_softmax_cross_entropy is deprecated. Please use 
+tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-07-05 20:41:01,453 INFO tool=detect_face 
+timestamp=2026-07-05T15:11:01.453229+00:00 status=success
+2026-07-05 20:41:01,457 INFO Processing request of type ListToolsRequest
+2026-07-05 20:41:03,276 INFO Processing request of type CallToolRequest
+WARNING: All log messages before absl::InitializeLog() is called are written 
+to STDERR
+I0000 00:00:1783264263.842750    9868 port.cc:153] oneDNN custom operations 
+are on. You may see slightly different numerical results due to floating-point 
+round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written 
+to STDERR
+I0000 00:00:1783264266.252705    9868 port.cc:153] oneDNN custom operations 
+are on. You may see slightly different numerical results due to floating-point 
+round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-07-05 20:41:08,149 WARNING From C:\Users\sombi\AppData\Roaming\Python\Pyth
+on312\site-packages\tf_keras\src\losses.py:2976: The name 
+tf.losses.sparse_softmax_cross_entropy is deprecated. Please use 
+tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-07-05 20:41:11,850 ERROR Embedding generation failed
+Traceback (most recent call last):
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+commons\weight_utils.py", line 53, in download_weights_if_necessary
+    logger.info(f"\U0001f517 {file_name} will be downloaded from {source_url} 
+to {target_file}...")
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+commons\logger.py", line 45, in info
+    self.dump_log(f"{message}")
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+commons\logger.py", line 89, in dump_log
+    print(f"{str(datetime.now())[2:-7]} - {message}")
+  File "C:\Program Files\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f517' in 
+position 20: character maps to <undefined>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Capstone Project\vibematch\mcp_server\tools\embeddings.py", line 
+32, in generate_embedding
+    result = DeepFace.represent(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+DeepFace.py", line 506, in represent
+    return representation.represent(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+modules\representation.py", line 104, in represent
+    model: FacialRecognition = modeling.build_model(
+                               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+modules\modeling.py", line 126, in build_model
+    cached_models[task][model_name] = model()
+                                      ^^^^^^^
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+models\facial_recognition\Facenet.py", line 78, in __init__
+    self.model = load_facenet512d_model()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+models\facial_recognition\Facenet.py", line 1702, in load_facenet512d_model
+    weight_file = weight_utils.download_weights_if_necessary(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sombi\AppData\Roaming\Python\Python312\site-packages\deepface\
+commons\weight_utils.py", line 61, in download_weights_if_necessary
+    raise ValueError(
+ValueError: \u26d3\ufe0f\u200d\U0001f4a5 An exception occurred while 
+downloading facenet512_weights.h5 from https://github.com/serengil/deepface_mod
+els/releases/download/v1.0/facenet512_weights.h5. Consider downloading it 
+manually to C:\Users\sombi\.deepface\weights\facenet512_weights.h5.
+Downloading sample face image...
+Failed to download from https://upload.wikimedia.org/wikipedia/commons/7/7d/Dwayne_Johnson_2015.jpg -> HTTP Error 404: Not Found
+Downloaded sample image from https://raw.githubusercontent.com/opencv/opencv/master/samples/data/lena.jpg
+Sample image format JPEG size (512, 512)
+Calling moderate_image...
+{'safe': True, 'reason': 'ok'}
+Calling detect_face...
+{'ok': True, 'face_count': 1, 'bbox': {'x': 0.418, 'y': 0.3789, 'width': 0.2695, 'height': 0.3848}, 'features': {'jaw_ratio': 0.7005, 'eye_spacing': 0.4432, 'brow_angle': '-0.0532', 'smile_curve': 0.6935}}
+Calling generate_embedding...
+{'ok': False, 'error': 'MCP tool call failed'}
